@@ -67,4 +67,8 @@
     .group-name {
         display: none;
     }
+
+    .search_bar input {
+        max-width: 300px;
+    }
 }
