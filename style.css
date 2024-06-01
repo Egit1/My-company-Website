@@ -26,7 +26,7 @@ a.active:hover {
     color: white;
 }
 .darkmode {
-    background: linear-gradient(450deg, rgb(4,4,4), rgb(63, 63, 138));
+    background:#000;
     color: rgb(255, 255, 255);
     transition: all .50s ease;
 }
