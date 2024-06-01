@@ -26,6 +26,10 @@
         gap: 0.5rem;
         transition: all .50s ease;
     }
+
+    .navbar a {
+        font-size: 0.89rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -69,6 +73,6 @@
     }
 
     .search_bar input {
-        max-width: 300px;
+        max-width: 250px;
     }
 }
