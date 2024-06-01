@@ -74,9 +74,9 @@ header.header {
     padding: 4px 30px;
     text-align: center;
     caret-color: rgb(255, 255, 255);
-    border-radius: 10px;
+    border-radius: 9px;
     border: none;
-    font-size: 1.44rem;
+    font-size: 1.05rem;
     outline: none;
     background: linear-gradient(to left, rgb(117,117,175), rgb(162, 92, 212));
     color: white;
@@ -117,7 +117,7 @@ a:last-child:hover {
     gap: .4rem;
 }
 .account i.fa-bars {
-    font-size: 1.2rem;
+    font-size: 1.33rem;
     font-weight: 600;
     color: rgb(162, 92, 212);
     display: none;
