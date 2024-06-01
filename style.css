@@ -44,16 +44,6 @@ ul {
     list-style-type: none;
 }
 
-@font-face {
-    font-family: Poppin-regular;
-    src: url(Fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
-    font-family: Poppin-bold;
-    src: url(Fonts/Poppins-Bold.ttf);
-}
-
 header.header {
     display: flex;
     align-items: center;
@@ -70,8 +60,7 @@ header.header {
     height: 70px;
 }
 .group-name {
-    font-size: 3.5vmin;
-    font-family: Poppin-bold;
+    font-size: 3.52vmin;
 }
 .search_bar {
     display: flex;
@@ -108,7 +97,7 @@ header.header {
 
 .navbar a {
     padding: 5px 4.5px;
-    font-size: 0.88rem;
+    font-size: 1.08rem;
     transition: all .50s ease;
 }
 a:last-child:hover {
