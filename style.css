@@ -63,6 +63,7 @@ header.header {
 }
 .group-name {
     font-size: 3.52vmin;
+    font-weight: 600;
 }
 .search_bar {
     display: flex;
