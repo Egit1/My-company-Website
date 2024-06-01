@@ -58,6 +58,8 @@ header.header {
 }
 .logo img {
     height: 70px;
+    width: 70px;
+    border-radius: 50%;
 }
 .group-name {
     font-size: 3.52vmin;
