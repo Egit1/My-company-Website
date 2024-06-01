@@ -1,0 +1,70 @@
+
+
+/* RESPONSIVE DESIGN MODE */
+
+@media (max-width: 1094px) {
+    .search_bar {
+       position: absolute;
+       top: 150px;
+       left: 50%;
+       transform: translate(-50%, 0);
+       transition: all .50s ease;
+    }
+}
+
+@media (max-width: 912px) {
+    .account i#dark_light {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar ul {
+        gap: 0.5rem;
+        transition: all .50s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    .account i.fa-bars {
+        display: block;
+        z-index: 9999;
+        color: rgb(255, 255, 255);
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        background: rgba(0,0,0,.9);
+        padding-top: 50px;
+        z-index: 999;
+        overflow: hidden;
+        transition: all .50s eas;
+    }
+
+        .darkmode .navbar ul {
+            background-color: rgba(0, 0, 0, 0.7)
+        }
+    .navbar ul.openMenu {
+        right: 0;
+    }
+    .navbar a {
+        color: white;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .group-name {
+        display: none;
+    }
+}
