@@ -137,3 +137,9 @@ a:last-child:hover {
 .account i:hover {
     color: rgb(233, 180, 233);
 }
+
+section.side-bar .wrapper {
+    padding: 20px;
+    background: rgba(255,255,255,.4);
+    border-radius: 9px;
+}
