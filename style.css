@@ -101,7 +101,7 @@ header.header {
 
 .navbar a {
     padding: 5px 4.5px;
-    font-size: 1.18rem;
+    font-size: 1.06rem;
     transition: all .50s ease;
 }
 a:last-child:hover {
