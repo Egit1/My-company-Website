@@ -103,7 +103,7 @@ header.header {
 
 .navbar a {
     padding: 5px 4.5px;
-    font-size: 1.06rem;
+    font-size: 0.86rem;
     transition: all .50s ease;
 }
 a:last-child:hover {
@@ -119,7 +119,7 @@ a:last-child:hover {
     gap: .4rem;
 }
 .account i.fa-bars {
-    font-size: 1.13rem;
+    font-size: 0.93rem;
     font-weight: 600;
     color: rgb(162, 92, 212);
     display: none;
@@ -131,7 +131,7 @@ a:last-child:hover {
     border-radius: 12px;
     cursor: pointer;
     transition: all .50s ease;
-    font-size: 1.33rem;
+    font-size: 0.93rem;
 }
 
 .account i:hover {
