@@ -140,6 +140,12 @@ a:last-child:hover {
 
  .wrapper ul {
     padding: 20px;
+    display: inline-block;
     background: rgba(255,255,255,.4);
     border-radius: 9px;
+}
+
+.wrapper li {
+    margin: 20px 10px;
+    font-size: 1.04rem;   
 }
