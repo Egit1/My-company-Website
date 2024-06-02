@@ -71,7 +71,7 @@ header.header {
     gap: 0.4rem;
 }
 .search_bar input {
-    padding: 4px 30px;
+    padding: 4.5px 30px;
     text-align: center;
     caret-color: rgb(255, 255, 255);
     border-radius: 9px;
