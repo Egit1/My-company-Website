@@ -30,6 +30,10 @@
     .search_bar input {
         font-size: 0.89rem;
     }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 768px) {
