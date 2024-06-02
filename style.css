@@ -43,7 +43,9 @@ a.active:hover {
 ul {
     list-style-type: none;
 }
-
+section {
+    padding: 50px 3.5%;
+}
 header.header {
     display: flex;
     align-items: center;
