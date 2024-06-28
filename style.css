@@ -1,0 +1,677 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+@font-face {
+    font-family: Amoitar;
+    src: url(Fonts/Amoitar\ Regular.ttf);
+}
+a {
+    text-decoration: none;
+    color: #010101;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    height: fit-content;
+    padding: 3rem 10%;
+    background: #fff;
+    transition: all .50s ease-in-out;
+}
+
+
+.dark-mode {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), black) no-repeat;
+    transition: all .50s ease;
+    color: white;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode .social_handles > i,
+.dark-mode nav a:hover,
+.dark-mode nav a.active,
+.dark-mode div.search_container form > input,
+.dark-mode div.search_container i,
+.dark-mode .individual_question,
+.dark-mode .content_outline ul
+
+{
+    background: linear-gradient(to right,rgb(26, 25, 27) 60%, rgb(0, 0, 0));
+    color: white;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+}
+.dark-mode .individual_question ul li {
+    color: rgb(22, 221, 195);
+}
+
+.dark-mode .individual_question li:hover {
+    color: darkorange;
+}
+.dark-mode .card_wrapper {
+    background: linear-gradient(to right,rgb(26, 25, 27) 60%, rgb(0, 0, 0));
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+}
+.dark-mode .social_handles span, .dark-mode .user_info .button:first-child {
+    color: rgb(255, 255, 255);
+    border-color: white;
+    box-shadow: 1px 1px 2px 1px #000000, -1px -1px 2px 1px #000000;
+}
+
+.dark-mode .social_handles_card span {
+    background: none;
+    box-shadow: none;
+}
+header .web_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+.web_title div.site_name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.web_title div.site_name span {
+    font-size: 3.6vmin;
+    font-family: Amoitar;
+}
+
+.web_title div.site_name span > img {
+    height: 50px;
+}
+.user_info {
+    padding: 4px;
+}
+.user_info .button {
+    width: fit-content;
+    padding: 0.4rem 0.9rem;
+    border-radius: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0.3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all .50s ease
+}
+
+.user_info .button:first-child {
+    background: transparent;
+    border: 1.5px solid black;
+    color: #000000;
+}
+
+.user_info .button:last-child {
+    background: linear-gradient(to right,rgb(26, 25, 27) 60%, rgb(0, 0, 0));
+    border: none;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    /* box-shadow: 1px 1px 4px #000, -1px -1px 4px #000; */
+}
+
+
+nav a {
+    transition: all .50s ease;
+    font-size: 1.08rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 15px;
+}
+nav ul > li a:hover {
+    background: white;;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+}
+
+nav ul > li a.active {
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+    background: white;
+}
+div.social_handles {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social_handles > span {
+    width: fit-content;
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background: transparent;
+    border: 1.5px solid black;
+    color: #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.social_handles_card.open_card {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 30px;
+}
+.social_handles_card {
+    position: absolute;
+    top: 200px;
+    right: 120px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(30px);
+    text-align: center;
+    width:  0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all .50s ease;
+}
+
+.social_handles_card span {
+    background: none;
+    border: none;
+    font-size: 1.23rem;
+    font-weight: 600;
+    margin-top: 1rem;
+
+}
+
+.social_handles_card ul li a {
+    font-size: 1.223rem;
+}
+.social_handles > i {
+    padding: 0.6rem 0.8rem;
+    border-radius: 20px;
+    background: white;
+    color: #000;
+    box-shadow: 1px 1px 5px #0f0f0f, -1px -1px 5px #000;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all .50s ease
+}
+
+section {
+    margin: 5% 0;
+    width: 100%;
+}
+
+section.search_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,.5), #000), url(images/portrait-sad-man.jpg) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 20px;
+    padding: 5rem;
+    color: white;
+}
+
+.search.active .autocom-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocom-box {
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.autocom-box li {
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.search.active .autocom-box li {
+    display: block;
+}
+
+.autocom-box li:hover {
+    background: gray;
+}
+span.content {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+div.search_container {
+    position: relative;
+    transition: all .50s ease
+}
+div.search_container form > input {
+    width: 600px;
+    padding: 0.7rem 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    transition: all .50s ease
+}
+
+div.search_container form > input[Placeholder] {
+    font-size: 1.09rem;
+}
+
+div.search_container i {
+    position: absolute;
+    top: 5.5px;
+    right: 8px;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+    color: rgb(0, 0, 0);
+    background: white;
+    padding: 0.6rem;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .50s ease
+}
+
+div.search_filter ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 0.8rem;
+}
+
+div.search_filter li {
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    background: rgba(255,255,255,.3);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    transition: all .50s ease;
+}
+
+div.search_filter li:hover {
+    background: rgba(255,255,255,.1);
+}
+
+
+.card_wrapper {
+    max-width: 600px;
+    height: fit-content;
+    background: white;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+    border-radius: 10px;
+    padding: 10px 0;
+
+}
+
+.recent_articles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 8px;
+    margin: 1rem;
+}
+
+.card img {
+    display: block;
+    width: 300px;
+    /* border-radius: 10px; */
+}
+.card .card_content {
+    display: block;
+    gap: 1rem;
+}
+h4.card-title {
+    font-size: 1.08rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+p.details {
+    text-align: justify;
+}
+.recent_articles iframe {
+    border-radius: 13px;
+}
+
+footer {
+    height: fit-content;
+    width: 100%;
+    padding: 30px 40px;
+    background: linear-gradient(to right,rgba(26, 25, 27, .8) 60%, rgb(0, 0, 0)), url(images/portrait-sad-man.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 13px;
+    margin-top: 25%;
+}
+
+
+footer .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 10px 0 3rem 0;
+}
+
+.wrapper .name {
+    font-family: Amoitar;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.wrapper img {
+    width: 50px;
+}
+
+section.I_start {
+    margin: 10% 0;
+}
+
+.I_start h1 {
+    font-size: 2.45rem;
+    color: transparent;
+    background: linear-gradient(to left, aqua, blue);
+    background-clip: text;
+    font-family: "PT Serif Caption", serif;
+    font-weight: 700;
+    padding: 2rem 0;
+}
+
+.I_start p {
+    font-family: "Bree Serif", serif;
+    padding: 10px 80px 8px 40px;
+    line-height: 1.8; 
+    font-size: 1.089rem;
+}
+
+.I_start h5 {
+    font-size: 1.42rem;
+    padding: 8% 0 2% 0;
+    color: rgb(8, 6, 17);
+    text-transform: capitalize;
+}
+
+.I_start #mailRequest {
+    font-family: "Poppins", sans-serif;
+    padding: 0 0 20px 0;
+    font-weight: 600;
+    color: rgb(117, 5, 61);
+}
+
+.I_start form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    background: linear-gradient(to bottom, rgba(33,33,22,.4), rgb(15, 117, 115)), url(images/3d-rendering-laptop.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter:saturate(40%);
+    width: 100%;
+    border-radius: 15px;
+}
+.I_start form label {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.I_start input {
+    padding: 0.8rem 2rem;
+    width: 60%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    color: white;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(40px);
+}
+
+.I_start input::placeholder {
+    color: white;
+}
+.I_start input#submit {
+    background: linear-gradient(to right,rgb(26, 25, 27) 60%, rgb(0, 0, 0));
+    border: none;
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+    color: white;
+    width: fit-content;
+    margin: 30px 0 10px 0;
+    cursor: pointer;
+}
+
+.shelve_wrapper ul, .shelve_wrapper_two ul, .shelve_wrapper_three ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.book_cover {
+    background: url(images/The\ Purpose\ Driven\ Life.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    width: 150px;
+    position: relative;
+    transition: all .50s ease;
+    border-radius: 10px;
+}
+
+.book_cover:hover {
+    background: linear-gradient( 240deg, rgba(0,0,0,.8), #000),url(images/The\ Purpose\ Driven\ Life.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition:  all .50s ease;
+    box-shadow: 1px 1px 2px 1px #000000, -1px -1px 2px 1px #000000;
+    color: rgb(0, 0, 0);
+    
+}
+.book_cover:hover a {
+    color: #fff;
+    opacity: 1;
+}
+.book_recommend {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.book_recommend > span {
+    font-size: 1.4rem;
+    font-family: Amoitar;
+}
+
+.book_recommend a {
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: all .50s ease;
+    color: navy;
+}
+
+.book_recommend a:hover {
+    color: rgb(189, 16, 16);
+}
+.shelve_wrapper {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(233,233,233,.2), rgb(1, 37, 22)), url(images/3d-rendering-laptop-nature.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 40px 60px;
+    border-radius: 14px;
+}
+
+.shelve_wrapper_two {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(233,233,233,.2), rgb(1, 37, 22)), url(images/3d-rendering-cartoon-like-woman-standing-sofa.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 40px 60px;
+    border-radius: 14px;
+}
+
+.shelve_wrapper_three {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(233,233,233,.2), rgb(1, 37, 22)), url(images/person-wearing-high-tech-vr-glasses-while-surrounded-by-bright-blue-neon-colors.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 40px 60px;
+    border-radius: 14px;
+}
+.shelve_wrapper .book_cover img {
+    height: 170px;
+    position: relative;
+}
+.shelve_wrapper > span, .shelve_wrapper_two > span, .shelve_wrapper_three > span {
+    font-size: 1.3rem;
+    font-family: Amoitar;
+    color: transparent;
+    padding: 10px 14px;
+    border-radius: 13px;
+    margin: 20px auto; 
+    display: block;
+    width: fit-content;
+    text-align: center;
+    backdrop-filter: blur(40px);
+    background: linear-gradient(to top, rgb(0, 0, 0), rgb(6, 5, 8));
+    background-clip: text;
+    /* box-shadow: 1px 1px 2px 1px #000000, -1px -1px 2px 1px #000000; */
+    /* color: rgb(0, 0, 0); */
+}
+
+.book_cover a {
+    transition: all .50s ease;
+    font-size: 1.35rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    text-align: center;
+}
+
+
+
+footer .quick_links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .quick_links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+footer .quick_links ul span {
+    box-shadow: 1px 1px 2px 1px #a39b9b, -1px -1px 2px 1px #a39b9b;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right,rgb(26, 25, 27) 60%, rgb(0, 0, 0));
+    padding: 0.6rem;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+footer .quick_links a {
+    color: white;
+    font-weight: 600;
+    transition:  all .50s ease;
+}
+footer .quick_links a:hover {
+    color: transparent;
+    background: linear-gradient(to right,rgb(206, 203, 18) 60%, rgb(7, 131, 214));
+    background-clip: text;
+}
+
+footer div.nav ul {
+    margin: 60px 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer div.nav ul li a {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    transition: all .50s ease;
+}
+
+footer div.nav ul li a:hover {
+    color: lightgray;
+}
+
+footer .social_links ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .social_links ul li a {
+    font-size: 1.3rem;
+    color: black;
+    padding: 0.4rem 0.45rem;
+    background: white;
+    border-radius: 20px;
+    transition: all .50s ease;
+}
+
+footer .social_links ul li a:hover {
+    color: transparent;
+    background: linear-gradient(to right,rgb(206, 203, 18) 60%, rgb(7, 131, 214));
+    background-clip: text;
+}
+
+footer .copyright {
+    color: white;
+    font-weight: 700;
+    margin-top: 30px;
+}
